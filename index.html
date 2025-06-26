@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Harleen Kumar</title>
+  <style>
+    /* Reset and base styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 5px;
+      border-radius: 20px;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      background-image: url(bg.jpg);
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+      max-width: 1100px;
+      margin: auto;
+      background-color: rgba(255, 255, 255, 0.85);
+      background-image: url('resume-bg.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      backdrop-filter: blur(2px);
+      padding: 30px;
+      flex-wrap: wrap;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .left-column {
+      flex: 1;
+      max-width: 300px;
+      text-align: center;
+      border-right: 2px solid #eee;
+      padding-right: 20px;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    .contact-info {
+      text-align: left;
+    }
+
+    .contact-info h2 {
+      font-size: 1.4rem;
+      color: #2980b9;
+      margin-bottom: 10px;
+    }
+
+    .contact-info p, .contact-info a {
+      font-size: 1rem;
+      margin: 5px 0;
+      color: #444;
+      text-decoration: none;
+    }
+
+    .right-column {
+      flex: 2;
+      padding-left: 20px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: #2980b9;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 5px;
+    }
+
+    p, li {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .skills li {
+      background: #eaf4fc;
+      padding: 6px 12px;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .left-column {
+        border-right: none;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 20px;
+        max-width: 100%;
+      }
+
+      .right-column {
+        padding-left: 0;
+        padding-top: 20px;
+      }
+    }
+
+    /* View More Button */
+    .hidden {
+      display: none;
+    }
+
+    button {
+      background-color: #2980b9;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #1a5f8a;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="left-column">
+      <img src="profile.jpeg" alt="Profile Picture" class="profile-pic" />
+      <div class="contact-info">
+        <h2>Contact</h2>
+        <p>Email: Harleenkumar@outlook.com</p>
+        <p>Phone: +91-9876543210</p>
+        <p><a href="https://www.linkedin.com/in/harleenkumar/">LinkedIn</a></p>
+      </div>
+    </div>
+
+    <div class="right-column">
+      <section>
+        <h2>Profile</h2>
+        <p>
+          Highly motivated and results-oriented Business Consultant and Agile Project Manager (Certified PMP and Scrum
+          Master) with a passion for delivering business value. Proven ability to manage complex projects, budgets, and
+          teams to ensure on-time, on-budget completion. Skilled communicator with experience collaborating with diverse
+          stakeholders including clients, vendors, and internal teams.
+        </p>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+        <ul>
+          <li>
+            <strong>Project Manager ADM</strong> IBM <br />
+            Managed project iterations and controlled financials for a $150M initiative. Led staffing and maintained documentation, invoices, and compliance.
+          </li>
+        </ul>
+
+        <!-- Hidden Detailed Projects -->
+        <div id="moreExperience" class="hidden">
+          <ul>
+            <li><strong>IESO AWS Migration (03/2024 - Current)</strong> – Leading hybrid AWS migration, daily standups, cost reduction & Gantt tracking.</li>
+            <li><strong>Bell Canada Program (03/2024 - Current)</strong> – Bid coordination via iValua, revenue calc, and SOW invoicing.</li>
+            <li><strong>Nova Scotia SAP Modernization (02/2023 - 01/2024)</strong> – PM for $150M S/4HANA rollout, resource planning, and CR handling.</li>
+            <li><strong>Maximo & Oracle WFM (03/2022 - 02/2023)</strong> – Managed internal resourcing, external hiring, and utilization reporting.</li>
+            <li><strong>Scotiabank Advisor (09/2021 - 03/2022)</strong> – Client onboarding, KYC updates, and banking solutions.</li>
+            <li><strong>CellCarta CT PM (01/2021 - 07/2021)</strong> – Sample logistics coordination, stakeholder reporting, and admin support.</li>
+          </ul>
+        </div>
+
+        <button onclick="toggleExperience()" id="toggleBtn">View More</button>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <ul>
+          <li><strong>Bachelor of Science</strong>, Saint Mary's University (2018–21)</li>
+          <li><strong>Certificate in Human Resource Management</strong>, Saint Mary's University (2019–21)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Technical Skills</h2>
+        <ul class="skills">
+          <li>Microsoft Office Suite</li>
+          <li>Microsoft Project</li>
+          <li>Advanced Excel</li>
+          <li>JIRA</li>
+          <li>Asana</li>
+          <li>Confluence</li>
+          <li>Trello</li>
+          <li>Mural</li>
+          <li>Monday.com</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Project Management Skills</h2>
+        <ul class="skills">
+          <li>Traditional</li>
+          <li>Agile</li>
+          <li>Hybrid</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Skills</h2>
+        <ul class="skills">
+          <li>CRM</li>
+          <li>Communication</li>
+          <li>People Management</li>
+          <li>Resource Management</li>
+          <li>Stakeholder Engagement</li>
+          <li>Public Speaking</li>
+          <li>Financial Analysis</li>
+          <li>Conflict Resolution</li>
+          <li>Org Development</li>
+          <li>Team Leadership</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    function toggleExperience() {
+      const moreExperience = document.getElementById('moreExperience');
+      const toggleBtn = document.getElementById('toggleBtn');
+
+      if (moreExperience.classList.contains('hidden')) {
+        moreExperience.classList.remove('hidden');
+        toggleBtn.innerText = 'View Less';
+      } else {
+        moreExperience.classList.add('hidden');
+        toggleBtn.innerText = 'View More';
+      }
+    }
+  </script>
+</body>
+</html>
